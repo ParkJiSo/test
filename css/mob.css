@@ -1,0 +1,136 @@
+* { margin: 0; padding: 0;
+    box-sizing: border-box;
+    list-style: none;}
+a {text-decoration: none; color:rgb(5, 10, 29)}
+img {vertical-align: top;}
+html, body {
+     overflow-x: hidden; 
+     overflow-y: scroll;
+     word-break: keep-all;
+     word-wrap: break-word;
+     font-family: 'Orbitron', sans-serif; color: gray;
+     height: 100vh;
+     background-color: #000;
+}
+
+/* layout */
+#header {color: #000; height: 50px;}
+#logo {position: relative; top: 0.4rem; left: 2rem; z-index: 10; width: 150px;}
+#logo img {width: 100%;}
+#header .inner {position: relative; margin: 0px;
+     max-width: 1400px; height: 0px;}
+/* hide menu */
+.gnb {position: fixed; top: 50px; width: 100%; height: 150px; 
+     z-index: 100; display: none;}   
+.sub {display: none;}
+
+#visual {position: relative; margin: 0 auto; height: 100%; 
+     border: 0px solid black;}
+#visual:after {content: ''; display: block; clear: both;}
+
+#footer {width: 100%; height: 50px; _background: rgb(5, 10, 29); 
+     position: relative; bottom: 0;}
+#footer .inner {
+     max-width: 1400px; 
+     top: 3rem; left: 3rem; 
+     margin: 0 auto; font-size: 12px;}
+
+/*header*/
+#header .inner .gnb {
+     display: block; position: relative; right: -10px; 
+     bottom: 0px; 
+     font-size: 15px; float: left; padding-left: 5px; letter-spacing: -.3px;} 
+/* main bar icon layout */
+#header .inner .gnb_btn {display: block; position: absolute;
+     right: 10px; bottom: 16px; color: #000; }
+
+.bar1, .bar2, .bar3 {width: 25px; height: 3px; background-color:rgb(255, 255, 255);
+     margin: 3px 0; transition: 0.4s; border-radius: 5px;}     
+
+.change .bar1 {transform: rotate(-48deg) translate(-9px, 0.5px);}    
+.change .bar2 {opacity: 0;}
+.change .bar3 {transform: rotate(48deg) translate(-7px, 0.5px);}
+
+/* 아이콘 클릭했을 시 모션 */
+.gnb:after {content: ''; display: block; clear: both;}
+.gnb li {
+    float: left; width: 98.8%; text-align: center; background: rgba(255, 255, 255, 0.39);
+    line-height: 30px; font-weight: bold;}
+
+.gnb li a {display: block; text-align: center;}
+.gnb li a:hover {color: rgb(51, 51, 51); font-weight: bold;}
+
+.sub>li {
+     width: 100%;
+     cursor: pointer;
+     display: inline;
+}
+.sub>li>a {
+     font-weight: 600;
+     display: inline-block;
+     font-size: 14px;
+     letter-spacing: -0.5px;}
+
+.sub>li>a:after {
+     display: block;
+     content: "";
+     height: 3px;
+     left: 0;
+     width:0;
+     bottom: 4px;
+     background-color: #fff;
+     transition-duration: 0.4s;
+}
+.sub>li>a:hover:after {
+     width: 100%;
+}
+
+/* visual */
+.wrap {position: relative; height: 100%; width: 100%; overflow: hidden;}
+.wrap::before {
+     position: absolute;
+     display: block;
+     content: "";
+     top: 80px;
+     left: 30px;
+     width: 2px;
+     height: calc(100vh - 160px);
+     background-color: #fff;
+     z-index: 10;
+}
+.wrap::after {
+     position: absolute;
+     display: block;
+     content: "";
+     top: 80px;
+     right: 30px;
+     width: 2px;
+     height: calc(100vh - 160px);
+     background-color: #fff;
+     z-index: 10;
+}
+.wrap6 {position: relative; width: 100%; height: 100%;}
+.wrap .wrap6>li {position: absolute; left: 0%; width: 100%; height: 100%;}
+.wrap .wrap6>li>img {width: 100%;}
+
+/* visual btn */
+.wrap_btn {position: absolute; bottom: 0; width: 100%; height: 15px;}
+.wrap_btn li {
+     position: relative; bottom: 80%; width: 10%; height: 100%; float: left;
+     background: rgba(0,0,0,0.3);
+     transition: all 0.5s;
+     border-radius: 5px;
+}
+.wrap_btn li:first-child {
+     margin-left: 15%;
+}
+
+
+.typo {position: absolute; left: 50px; top: 63%; width: 280px;}
+.typo h2 {font-size: 35px; color: #ffffff;}
+.typo p {font-size: 12px;}
+
+
+/* footer */
+p.copyright {padding-top: 20px; padding-left: 2rem;}
+
